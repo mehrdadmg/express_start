@@ -10,7 +10,7 @@ router.get('/', (req: Request, res: Response) => {
   getAllUsers(req, res);
 });
 
-router.post('/', validationMiddleware(UserCreateDto), (req: Request, res: Response) => {
+router.post('/:id', validationMiddleware(UserCreateDto), (req: Request, res: Response) => {
   res.send(200);
 });
 
